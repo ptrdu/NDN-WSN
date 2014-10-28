@@ -55,7 +55,7 @@ NDN-WSN
 　　提供了底层CTP协议的相关功能，启动CTP以及设置根节点。提供net接口，netC模块具体实现接口功能。
 #### 数据读取模块
 **具体文件**
-</pre>
+<pre>
 <code>
 /ndn/readData.nc
 /ndn/readDataC.nc
@@ -64,7 +64,7 @@ NDN-WSN
 　　开启传感器读取数据功能。提供readData接口，可以获得三种数据，分别为光强，温度以及湿度。readDataC模块实现接口具体功能。
 ####  数据刷新模块
 **具体文件**
-</pre>
+<pre>
 <code>
 /ndn/refresh.nc
 /ndn/refreshC.nc
@@ -75,7 +75,7 @@ NDN-WSN
 　　提供refresh接口，refreshC模块实现接口具体功能。
 #### NDN策略模块
 **具体文件**
-</pre>
+<pre>
 <code>
 /ndn/strategy.nc
 /ndn/strategyP.nc
@@ -87,7 +87,7 @@ NDN-WSN
 　　对于Interest包和Data包的处理和传统NDN是一样的。
 #### 其它文件
 **具体文件**
-</pre>
+<pre>
 　<code>
 /ndn/content.nc
 /ndn/funcitonsP.nc
@@ -103,7 +103,7 @@ NDN-WSN
 #### 文件结构
 　　测试文件，一个简答的测试用例，构造NDN策略，然后让节点１广播Interest数据包查询节点信息。
 　　**代码结构**
-　　</pre>
+　　<pre>
 　　<code>
 　　/test/Makefile
 　　/test/test.py
@@ -116,10 +116,12 @@ NDN-WSN
 　  testC.nc，testAppC.nc和Makefile文件是具体的实现文件，其它文件为TOSSIM仿真文件
 #### 仿真测试
 将/NDN-WSN/test/文件夹内的文件拷贝到/NDN-WSN/ndn/文件夹内，然后:
+<pre>
 <code>
 make micaz sim
 python test.py
 </code>
+</pre>
 执行
 
 
