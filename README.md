@@ -1,6 +1,5 @@
 ### 内容
 
-[TOC]
 NDN-WSN
 ===================
 一个基于NDN思想的无线传感器网络的设计与实现，采用Tinyos实现。
@@ -46,7 +45,7 @@ NDN-WSN
 /ndn/strategyP.nc</code>
 </pre>
 ####  CTP启动模块
->**具体文件**
+**具体文件**
 <pre>
 <code>
 /ndn/net.nc
@@ -55,7 +54,7 @@ NDN-WSN
 </pre>
 　　提供了底层CTP协议的相关功能，启动CTP以及设置根节点。提供net接口，netC模块具体实现接口功能。
 #### 数据读取模块
->**具体文件**
+**具体文件**
 </pre>
 <code>
 /ndn/readData.nc
@@ -64,7 +63,7 @@ NDN-WSN
 </pre>
 　　开启传感器读取数据功能。提供readData接口，可以获得三种数据，分别为光强，温度以及湿度。readDataC模块实现接口具体功能。
 ####  数据刷新模块
->**具体文件**
+**具体文件**
 </pre>
 <code>
 /ndn/refresh.nc
@@ -75,7 +74,7 @@ NDN-WSN
 　　同时由于NDN的CS缓冲特性，当有请求新数据Interest包时，会根据规则从就近节点的CS表中构造Data数据包返回，这样会造成无法获得最新的数据，定时刷新CS表和PIT表是为了获取新的数据。
 　　提供refresh接口，refreshC模块实现接口具体功能。
 #### NDN策略模块
->**具体文件**
+**具体文件**
 </pre>
 <code>
 /ndn/strategy.nc
@@ -87,7 +86,7 @@ NDN-WSN
 　　 FIB表的建立：当使用CTP协议构造完一棵汇聚树的时候，开始构建FIB表。每一个节点向自己的父亲节点发送自己的路由能力。节点根据收到的路由能力更新自己的路由能力，同时将收到的路由能力信息加入到自己的FIB表当中。
 　　对于Interest包和Data包的处理和传统NDN是一样的。
 #### 其它文件
->**具体文件**
+**具体文件**
 </pre>
 　<code>
 /ndn/content.nc
@@ -103,7 +102,7 @@ NDN-WSN
 -------------
 #### 文件结构
 　　测试文件，一个简答的测试用例，构造NDN策略，然后让节点１广播Interest数据包查询节点信息。
-　　>**代码结构**
+　　**代码结构**
 　　</pre>
 　　<code>
 　　/test/Makefile
@@ -113,7 +112,8 @@ NDN-WSN
 　　/test/testAppC.nc
 　　/test/testC.nc</code>
 　　</pre>
-　　testC.nc，testAppC.nc和Makefile文件是具体的实现文件，其它文件为TOSSIM仿真文件
+　　
+　  testC.nc，testAppC.nc和Makefile文件是具体的实现文件，其它文件为TOSSIM仿真文件
 #### 仿真测试
 将/NDN-WSN/test/文件夹内的文件拷贝到/NDN-WSN/ndn/文件夹内，然后:
 <code>
